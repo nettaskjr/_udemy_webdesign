@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!-- elementos ou tags são abertos com < e fechados com </ -->
+<!-- existe dois tipos de elmentos:
+os block elements (elementos de bloco) são utilizados para formatar um bloco de texto
+os inline elementes (elmentos de linha) são utilizados na mesma linha) -->
+<!-- atributos nos dá informações sobre os elementos entra junto com o elemento dentro dos <  ....  >
+nome="texto" -->
+<html>
+
+<!-- cabeçalho com informativos para a página -->
+
+<head>
+    <!-- conjunto de caracteres utf-8 engloba quase todas as linguagens -->
+    <meta charset="utf-8">
+    <!-- titulo -->
+    <title>Meu Primeiro Website</title>
+    <!-- Link para o CSS ou qualquer outro arquivo -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- cofingurando os estilos com internal style -->
+    <!-- <style>
+        h1 {
+            background-color: black;
+            color: white;
+        }
+
+        h2 {
+            background-color: green;
+            color: red;
+        }
+    </style> -->
+</head>
+
+<!-- a página em si -->
+
+<body>
+
+    <!-- definir a classe no css iniciado com "." -->
+    <div class="navigation">
+        <!-- posso ter diferentes H1 -->
+        <h1>Economia</h1>
+
+        <h2> Negócios</h2>
+
+    </div>
+
+    <!-- titulos -->
+    <!-- title mostra um texto ao passar pelo elemento -->
+    <!-- inline style o formato abaixo ou seja, direto não é recomendao, pois a manutenção é mais dificil -->
+    <!-- <h1 style="color: rded; background-color: black" title="Titulo do artigo">Doleiros suspeitos de lavar dinheiro em esquema de Sérgio Cabral chegam ao Rio</h1> -->
+
+    <!-- internal style dentro do head  está comentado para não ser usado-->
+    <!-- <h1 title="Titulo do artigo">Doleiros suspeitos de lavar dinheiro em esquema de Sérgio Cabral chegam ao Rio</h1> -->
+
+    <div class="titulo-artigo">
+        <!-- external style CSS foi retirado a configuraçõ no css-->
+        <h1 title="Titulo do artigo">Doleiros suspeitos de lavar dinheiro em esquema de Sérgio Cabral chegam ao Rio</h1>
+
+        <h2>Juca Bala e Tony estavam no Uruguai e foram extraditados. Ambos foram denunciados pela Lava Jato no Rio por lavagem
+            de dinheiro. Eles fizeram exames no IML e já estão presos na Cadeia Pública de Benfica, na Zona Norte.</h2>
+
+    </div>
+
+    <div class="content">
+        <h3>Por Bruno Albernaz, G1 Rio</h3>
+        <h3>28/12/2017 14h15 Atualizado há 20 minutos</h3>
+
+        <!-- utilização de ID -->
+        <!-- para chamar o link utilize #, pode ser criado no css também -->
+        <a href="#lista">Clique para ir para lisgta de links</a>
+
+        <!-- utilização de imagens pasta/nome_do_arquivo 
+            src: onde está a imagem
+            alt: texto alternativo para imagens 
+        motivos:
+                caso a imagem nao apareça mostra o texto
+                ranqueamento pelo google em pesquisas por imagem
+                softwares de acessibilidade lêem as fotos-->
+        <img src="img/bg1.jpg" alt="Pessoa careca">
+        <!-- legenda na imagem -->
+        <figcaption>
+            Careca que foi preso
+        </figcaption>
+
+        <!-- paragrafos -->
+        <p>Os doleiros acusados de lavar dinheiro roubado pela quadrilha do ex-governador
+            <!-- negrito -->
+            <b>Sérgio Cabral, Vinícius Claret</b>, conhecido como Juca Bala, e Cláudio Fernando Barbosa,
+            <!-- italico -->
+            <i>o Tony</i>,
+            <!-- sublinhado -->
+            <u>chegaram ao Rio de Janeiro na tarde desta quinta-feira (28) vindos do Uruguai</u>.</p>
+        <p>Eles chegaram em um voo comercial que pousou no aeroporto do Galeão às 13h40.
+            <!-- mudança de linha, evitar utilizar este elemento -->
+            <br>
+            <br>A extradição deles foi concedida pelo governo uruguaio na semana passada. Escoltados por agentes da Polícia Federal,
+            os doleiros chegaram por volta das 14h45 ao
+            <!-- marcação como marca-texto -->
+            <mark>Instituto Médico Legal</mark>, na Zona Portuária.</p>
+        <p>Juca Bala e Tony fizeram exames e seguiram para a Cadeia Pública de Benfica, na Zona Norte, onde já estão presos.</p>
+
+        <h4>Saiba Mais</h4>
+
+        <!-- listas -->
+        <!-- lista não ordenada com "." ul -->
+        <!-- lista ordenada com números (1,2,3..) ol -->
+        <!-- link sendo redirecionado para cá -->
+        <ul id="lista">
+            <li>
+                <!-- se souber que existe id na pagina chamada pode ser colocado logo após o link com # .com.br#id -->
+                <a href="https://www.microsoft.com.br">Microsoft acompanha texto</a>
+            </li>
+            <li>
+                <a href="https://www.microsoft.com.br">Facebook inicia os trabalhos</a>
+            </li>
+            <li>
+                <a href="https://www.microsoft.com.br">Twitter avasaladora</a>
+            </li>
+        </ul>
+
+        <!-- colocando um frame (acesso a outro site) -->
+        <!-- <iframe src="http://www.uol.com.br"></iframe> -->
+
+        <!-- iframe do youtube -->
+        <!-- controls=0 não mostra o controles do youtbe -->
+        <!-- rel=0 não mostra videos relacionados -->
+        <!-- para buscar link no youtube pegue os compartilhar/incorporar -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C2xRRUhGGQk" frameborder="0" gesture="media" allow="encrypted-media"
+            allowfullscreen></iframe>
+
+    </div>
+
+    <!-- elemento de link <a> href indica qual o endereço do link-->
+    <!-- <a href="https://www.microsoft.com.br">Microsoft acompanha texto</a> -->
+
+    <!-- link com imagem -->
+    <!-- <a href="https://www.microsoft.com.br">
+        <img src="img/bg2.jpg" alt="Carro de policia">
+    </a> -->
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    margin-left: 120px;
+    text-align: left;
+}
+
+/* navigation */
+.navigation {
+    background: #ff7212;
+    color: white;
+    /* efeito de deslocamento na barra
+        como a margem é 120 diminui 20 no margin-left e aumenta 20 no padding-left */
+    margin-left: -20px;
+    padding-left: 20px;
+   
+}
+
+/* content */
+.content {
+    width: 900px;
+    margin-top: 50px;
+    font-size: 20px;
+	color: #484848;
+}
+
+.content a {
+    color: #484848;
+}
+
+.content h1 {
+    background: none;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.content h2 {
+    color: black;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.content h3 {
+    font-size: 12px;
+}
+
+.content p {
+    font-size: 16px;
+	line-height: 30px;
+}
+
+.content img {
+    width: 70%;
+}
+
+.content figcaption {
+    font-size: 12px;
+}
+
+.content h4 {
+    color: black;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.content li {
+    line-height: 32px;
+}

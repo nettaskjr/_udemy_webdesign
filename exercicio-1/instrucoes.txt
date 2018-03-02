@@ -1,0 +1,15 @@
+1 - Façã o download do arquivo exercicio1.rar e descompacte-o
+
+2 - abra o arquivo gabarito.html no navegador
+
+3 - abra um novo arquiovo HTML, monte a estrutura básica do HTML, crie as seções
+e os elementos corretos
+
+4 - o conteudo do site pode ser copiado do arquivo conteudo.txt
+
+5 - abra um arquivo CSS e faça o design do site seguindo o modelo
+
+6 - quando terminar, abra os arquivos gabarito.html e styles-gabarito.css para
+ver como eles foram feitos
+
+

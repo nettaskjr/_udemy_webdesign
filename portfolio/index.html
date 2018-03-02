@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Nestor - Portfolio Online</title>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- link de fontes do google -->
+	<!-- os numeros informados na lista abaixo identificam as larguras a serem utilizados -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
+	<!-- link para o arquivo javascript -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<!-- modificações para abertura em todas as telas -->
+	<!-- widt=device-width (tamanho total = tamanho total do dispositivo) -->
+	<!-- initial-scale evita que redimensione -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+</head>
+
+<body>
+
+	<div id="navigation" class="navigation">
+		<!-- lemrando que a barra tem que ser colada na parte de cima -->
+		<ul>
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="portfolio.html">Portfolio</a>
+			</li>
+			<li>
+				<a href="curriculo.html">Currículo</a>
+			</li>
+			<li>
+				<a href="contato.html">Contato</a>
+			</li>
+			<!-- menu hamburger (3 elements) será utilziado apenas para celular -->
+			<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+		</ul>
+	</div>
+
+
+	<div class="capa">
+		<!-- deverão ser colocados lado a lado, utilizando o css (inline-block) -->
+		<div class="profile-pic">
+			<img src="img/nestor-profile.png" alt="Foto de Nestor Junior">
+		</div>
+
+		<div class="profile-title">
+			<!-- spam é utilizado dentro de outro elemento, criando novos elementos sem quebra de linha -->
+			<h1>Nestor
+				<spam>Junior</spam>
+			</h1>
+			<h2>Gerente de Projetos, desenvolvedor web, fotógrafo, amante de tecnologia</h2>
+		</div>
+	</div>
+</body>
+
+</html>

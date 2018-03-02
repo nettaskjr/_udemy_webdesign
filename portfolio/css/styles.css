@@ -1,0 +1,443 @@
+/* neste caso é feito para os dois elementos */
+html, body {
+    /* resetando os valores de magin e padding do browser para que seja colocado a barra no inicio */
+    margin: 0;
+    padding: 0;
+    /* ao colocar isso as páginas não irão mostrar os textos, mas deve ser usado para limpar as fonts e poder utilizar as porcentagens corretas
+       nas colunas */
+    /* font-size: 0; */
+    background-color: #2b2b2b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navigation {
+    /* 3 formas de trabalhar com cores
+    NOME -> background-color: black; que é igual a RGB -> rgb(0,0,0), que também é igual HEXA -> #000000*/
+    background-color: #2b2b2b;
+    color: white;
+    /* altura deve elterar ul e il para mesma altura, sendo il com line-hight */
+    height: 50px;
+    font-weight: 100;
+    text-align: right;
+
+    animation-name: navigation-capa;
+    animation-duration: 4s;    
+}
+
+.navigation ul {
+    /* também é feito pois a ul está acima, e so ficará no inicio da página se for zerada tb */
+    margin-top: 0;
+    /* tira os marcadores */
+    list-style: none;
+    padding-left: 0;
+    text-align: right;
+    /* mesma altura da navigation */
+    height: 50px;
+}
+
+.navigation li {
+    /* padrão dos li é block, iremos utilizar inline-block para ficar em linha */
+    display: inline-block;
+    /* espaço antes e depois de cada item */
+    padding-left: 30px;
+    padding-right: 30px;
+    /* mesma altura da ul, centraliza automaticamente */
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.navigation li.threeline-icon {
+    display: none;
+}
+
+/* para mudar o cursor para seta e cor amarela */
+/* lembrando que isso não ocorrerá sem ser celular */
+.navigation li.threeline-icon:hover {
+    color: #f27609;
+    cursor: pointer;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #f27609;
+}
+
+.capa {
+    color: white;
+}
+
+.capa spam {
+    color: #f27609;
+    /* muda para linha de baixo */
+    display: block;
+}
+
+.capa div {
+    display: inline-block;
+    height: 650px;
+}
+
+.profile-pic {
+    /* incio de responsividade */
+    width: 40%;
+    text-align: center;
+
+    animation-name: profile-capa;
+    animation-duration: 5s;
+}
+
+.profile-pic img {
+    width: 350px;
+    /* cantos arrendondados nos elementos */
+    /* se utilizar o mesmo valor do tamanho da imagem para ficar redondo */
+    border-radius: 350px;
+    margin-top: 100px;
+}
+
+.profile-title {
+    /* coloca o texto acima, pois o padrão é seguindo a imagem */
+    vertical-align: top;
+    /* inicio de responsividade como já foi usado 40%, utilize 60% aqui */
+    width: 59%;
+    margin-top: 150px;
+    
+    animation-name: titulo-capa;
+    animation-duration: 5s;
+}
+
+.profile-title h1 {
+    font-size: 58px;
+    /* letra maiuscula */
+    text-transform: uppercase;
+    font-weight: 400;
+    /* deixa as linhas bem proximas */
+    line-height: 54px;
+}
+
+.profile-title h2 {
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: -26px;
+}
+
+.main {
+    color: white;
+    /* margens */
+    /* padding-top: 80px;
+    padding-right: 180px;
+    padding-bottom: 80px;
+    padding-left: 100px; */
+    /* ou */
+    /* top right bottom left */
+    padding: 80px 180px 80px 100px;
+ 
+    animation-name: conteudo;
+    animation-duration: 4s;    
+}
+
+.main h1 {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.main h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.main h3 {
+    color: #f27609;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.main p {
+    font-size: 18px;
+    font-weight: 100;
+    /* espaço entre as linhas */
+    line-height: 28px;
+    /* justificado */
+    text-align: justify
+}
+
+.cv-pic {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px; 
+}
+
+.breadcrumbs {
+    list-style: none;
+    padding-left: 0;
+    font-size: 16px;
+    color: grey;
+}
+
+.breadcrumbs a {
+    color: gray;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+}
+
+.social-img {
+    width: 50px;
+    /* margens entre eles */
+    margin-right: 10px;
+}
+
+.miniatura {
+    width: 320px;
+    height: 320px;
+    /* coloca um do lado do outro */
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    /* repeticao de imagem em background */
+    /* background-repeat: no-repeat */
+    /* realoca a imagem */
+    /* background-size: contain; */
+    /* esconde sobras ou seja se um componente pass para fora, se esconde a diferença */
+    overflow: hidden;
+}
+
+.miniatura a {
+    /* retirar o sublinhado dos links */
+    text-decoration: none;
+}
+
+/* a porcentagem abaixo e sobre a div que esta dentro da miniatura, ou seja
+    fica o tamanho total definido em miniatura */
+.blackbox {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0; /* transparente (0) vai de 0 a 1 (totalmente escuro) */
+    /* desce o blackbox dentro da miniatura, não esqueca de utilizar o overflow=hidden no componente pai */
+    padding-top: 120px;
+    /* tempo de retorno, ou seja, após o hover */
+    transition: 1s;
+}
+
+/* habilita quando o mouse fica em cima do objeto */
+.blackbox:hover {
+    /* pouco invisivel */
+    opacity: 0.8;
+    /* tempo para fazer a animação, assim fica mais suáve */
+    transition: 1s;
+}
+
+.blackbox-text {
+    text-align: center;
+}
+
+.blackbox-text h1 {
+    font-size: 16px;
+    color: #f27609;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.blackbox-text h2 {
+    text-transform: none;
+    font-weight: normal;    
+    margin-top: 0;
+}
+
+.fotos-trabalho {
+    /* imagem utilizando o tamanho máximo do componente pai */
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.back-page {
+    color: gray;
+    
+}
+
+/* animações */
+/* no w3school tem a propriedade transform que pode ajudar */
+
+@keyframes profile-capa {
+    /* 0% a animação começa */
+    /* imagem subindo */
+    0% {
+        opacity: 0; transform: translate(0px,20px);
+    }
+    100% {
+        opacity: 1; transform: translate(0px,0px);
+    }
+}
+
+@keyframes titulo-capa {
+    /* 0% a animação começa */
+    /* texto descendo */
+    0% {
+        opacity: 0; transform: translate(0px,-20px);
+    }
+    100% {
+        opacity: 1; transform: translate(0px,0px);
+    }
+}
+
+@keyframes conteudo {
+    /* 0% a animação começa */
+    /* menu aparecendo */
+    0% {
+        opacity: 0; transform: translate(-20px,0px);
+    }
+    100% {
+        opacity: 1; transform: translate(0px,0px);
+    }
+}
+
+@keyframes navigation-capa {
+    /* 0% a animação começa */
+    /* veja que o tempo para começar depende do fim da anterior, para que o efeito fique bom */
+    /* neste caso de 0 a 2 segundos (defina 4 segundos no componente) opacidade 0 e de 2 a 4 opacidade 100 */
+    /* ******************************** */
+    /* avaliar porque aparece um campo do lado esquerda da tela */
+    /* ******************************** */
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100; 
+    }
+}
+
+/* responsividade com @mediaquery */
+
+@media (max-width: 1000px) {
+
+    .navigation li {
+        /* esconde os menus */
+        display: none;
+    }
+
+    .navigation li.threeline-icon {
+        /* mostra o botão */
+        display: inline-block;   
+    }
+
+    .capa div {
+        display: block;
+        /* ajustar o conteudo */
+        height: auto;
+    }
+
+    .profile-pic {
+        width: 100%;
+        /* background-color: green; */
+    }
+
+    .profile-pic img {
+        margin-top: 0;
+        /* limita quando a imagem fica maior, ou seja, nunca fica maior que 80% da tela */
+        max-width: 80%;
+    }
+
+    .profile-title {
+        text-align: center;
+        width: 100%;
+        /* background-color: yellow; */
+        margin-top: 0;
+    }
+
+    .profile-title h1 {
+        margin-top: 30px;
+        font-size: 40px;
+        /* para não deixar colado */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .profile-title h2 {
+        /* para não deixar colado */
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .main {
+        /* para celular o lado esquerdo não precisa de muita margen */
+        /* usando porcentagem mante a proporção */
+        padding: 10px 5% 40px 5%
+        /*  */
+        
+    }
+
+    .main p {
+        /* quando diminui ficam espaços ruins quando justificados */
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .main a {
+        /* querbra texto grande, não será usado pois não precisa */
+        /* 
+        overflow-wrap: break-word;
+        word-wrap: break-word; 
+        */
+    }
+
+    .breadcrumbs li {
+        font-size: 12px;
+    }
+
+    .cv-pic {
+        float: none;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .miniatura {
+        /* não invade a tela */
+        max-width: 100%;
+        /* largura altura */
+        background-size: auto 100%
+    }
+
+    .blackbox {
+        /* no celular não tem hoover, tem que desligar, ou seja, resetar os valores  */
+        opacity: 0.8;
+    }
+
+    /* criação do botão de hamburguer */
+    .menujs {
+        /* se inserir novos vai aumentando */
+        height: auto;
+    }
+
+    .menujs ul {
+        height: auto;
+        text-align: center;
+        padding-right: 15%;
+        padding-left: 15%;
+
+    }
+
+    .menujs li {
+        /* cada um em sua linha */
+        display: block;
+        border-bottom: solid grey 1px;
+        width: 100%;
+        padding: 0;
+    }
+
+
+}
